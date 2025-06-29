@@ -1,12 +1,32 @@
-# React + Vite
+# 💼 Mahabur Rahaman | Full-Stack Developer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hello! I'm **Mahabur Rahaman**, a passionate and results-driven Full-Stack Developer with experience in building modern web applications using **MERN stack**, **Firebase**, and more. I love solving real-world problems through clean code, great UI/UX, and scalable backend logic.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend:** React, Tailwind CSS, JavaScript, HTML5, CSS3
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB, Firebase
+- **Other Tools:** Git, GitHub, Postman, Netlify, Vercel, Figma
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🌐 Live Portfolio
+
+🔗 [Visit My Portfolio](https://mahabur.xyz)  
+📧 Email: themahabur@gmail.com
+📍 Location: Bangladesh  
+🧑‍💻 Freelance / Remote Work: Available  
+
+---
+
+## 🧩 Featured Projects
+
+### 📚 EduSpark — Educational Service Sharing Platform
+A platform where educators can sell their services (not courses) to students.
+
+- Built with MERN Stack
+- Features: Role-based access, dashboard, secure authentication, Stripe payments
+- [Live Site](https://eduspark-bd07e.web.app) | [GitHub](https://github.com/themahabur/EduSpark)
