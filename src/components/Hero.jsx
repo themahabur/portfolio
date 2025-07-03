@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="flex flex-col-reverse items-center md:px-10 justify-between py-10 my-10 container mx-auto space-y-6 md:space-y-0"
+      className="flex flex-col-reverse items-center md:px-10 justify-between py-24 my-10 container mx-auto space-y-6 md:space-y-0"
     >
       <div className="md:w-1/2 space-y-4  md:text-left px-4 md:px-0">
         <h1 className="text-4xl md:text-5xl text-center text-gray-800 font-bold leading-tight">
@@ -22,18 +22,18 @@ const Hero = () => {
           with modern tech.
         </p>
         <div className="flex justify-center gap-4 text-2xl text-center">
-          <Link to="https://github.com/themahabur"  className="p-3 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 rounded-full hover:bg-gray-200 transition">
+          <Link to="https://github.com/themahabur"  className="p-3 bg-white rounded-lg transition border border-gray-200 hover:shadow-sm ">
          <FaGithub className="text-gray-700 hover:text-gray-900 transition" />
 
           </Link >
-          <Link to="https://www.linkedin.com/in/themahabur/" className="p-3 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 rounded-full hover:bg-gray-200 transition">
+          <Link to="https://www.linkedin.com/in/themahabur/" className="p-3 bg-white rounded-lg transition border border-gray-200 hover:shadow-sm ">
           <FaLinkedin className="text-gray-700 hover:text-gray-900 transition" />
           </Link>
-          <Link to="https://www.x.com/themahabur" className="p-3 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 rounded-full hover:bg-gray-200 transition">
+          <Link to="https://www.x.com/themahabur" className="p-3 bg-white rounded-lg transition border border-gray-200 hover:shadow-sm ">
           <FaTwitter className="text-gray-700 hover:text-gray-900 transition" />
 
           </Link>
-          <Link to="https://wa.me/01905909111" className="p-3 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 rounded-full hover:bg-gray-200 transition">
+          <Link to="https://wa.me/01905909111" className="p-3 bg-white rounded-lg transition border border-gray-200 hover:shadow-sm ">
           <FaWhatsapp className="text-gray-700 hover:text-gray-900 transition" />
 
           </Link>

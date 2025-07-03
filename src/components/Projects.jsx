@@ -35,14 +35,14 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-16 px-4 bg-gray-100">
+    <section id="projects" className="py-16 px-4">
       <div className="max-w-5xl mx-auto space-y-6">
         <h2 className="text-3xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
           Projects
         </h2>
         <div className="grid md:grid-cols-3 gap-6">
           {projects.map((project, idx) => (
-            <div key={idx} className="bg-white shadow-md p-4 rounded-md">
+            <div key={idx} className="bg-white border border-gray-200 p-4 rounded-md">
               <img
                 src={project.image}
                 alt={project.name}

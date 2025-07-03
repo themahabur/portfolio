@@ -3,7 +3,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-16 px-4 min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-50 to-blue-50">
+      className="py-16 px-4  flex items-center justify-center ">
       <div className="max-w-4xl w-full text-center space-y-8">
         <h2 className="text-4xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">About Me</h2>
         <div className="hover:shadow-lg  backdrop-blur-sm p-6 rounded-xl  border border-gray-200 bg-white">
