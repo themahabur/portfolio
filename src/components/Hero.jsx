@@ -51,7 +51,7 @@ const Hero = () => {
         <img
           src={logo}
           alt="Profile"
-          className="rounded-full border border-gray-200 shadow-sm w-54 h-54  object-cover transition-transform transform hover:scale-105"
+          className="rounded-full  w-54 h-54 transition-transform transform hover:scale-105"
         />
       </div>
     </section>
