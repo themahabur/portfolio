@@ -11,8 +11,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 z-50  p-4 flex items-center justify-between w-full bg-white">
-      <div className="container mx-auto flex items-center justify-between ">
+   <nav className="fixed top-0 z-50 w-full md:p-4 flex justify-center">
+  <div className="md:w-2/5 w-full flex items-center justify-center gap-8 bg-gray-50 border border-gray-200 md:rounded-4xl px-4 py-3">
         <div className="flex items-center gap-4 relative">
           <div className="md:hidden">
             {isOpen ? (
@@ -28,7 +28,7 @@ const Navbar = () => {
             )}
           </div>
 
-          <h1 className="text-2xl font-bold ">Mahabur Rahman</h1>
+          <h1 className="text-2xl font-bold logo">M</h1>
 
          {isOpen && (
            <ul className="absolute top-12 left-0 bg-white shadow-lg rounded-lg md:hidden flex flex-col  gap-4 p-4">
@@ -63,9 +63,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <button className="bg-gradient-to-r from-indigo-500 to-purple-400 text-white px-4 py-2 rounded-md">
-          Resume
-        </button>
+        
       </div>
     </nav>
   );

@@ -18,36 +18,38 @@ const Hero = () => {
           </span>
         </h1>
         <p className="text-lg text-gray-700 text-center">
-          A Full Stack Developer who loves to build stunning web experiences
+          A Frontend Developer who loves to build stunning web experiences
           with modern tech.
         </p>
-        <div className="flex justify-center gap-4 text-2xl text-center">
-          <Link to="https://github.com/themahabur"  className="p-3 bg-white rounded-lg transition border border-gray-200 hover:shadow-sm ">
+        <div className="flex justify-center gap-4 text-xl text-center">
+          <Link to="https://github.com/themahabur"  className="flex items-center gap-2 py-2 px-3   bg-white rounded-3xl transition border border-gray-200 hover:shadow-sm ">
          <FaGithub className="text-gray-700 hover:text-gray-900 transition" />
+         Github
 
           </Link >
-          <Link to="https://www.linkedin.com/in/themahabur/" className="p-3 bg-white rounded-lg transition border border-gray-200 hover:shadow-sm ">
+          <Link to="https://www.linkedin.com/in/themahabur/" className="flex items-center gap-2 py-2 px-3   bg-white rounded-3xl transition border border-gray-200 hover:shadow-sm ">
           <FaLinkedin className="text-gray-700 hover:text-gray-900 transition" />
+          LinkedIn
           </Link>
-          <Link to="https://www.x.com/themahabur" className="p-3 bg-white rounded-lg transition border border-gray-200 hover:shadow-sm ">
+          <Link to="https://www.x.com/themahabur" className="flex items-center gap-2 py-2 px-3   bg-white rounded-3xl transition border border-gray-200 hover:shadow-sm ">
           <FaTwitter className="text-gray-700 hover:text-gray-900 transition" />
-
+          Twitter
           </Link>
-          <Link to="https://wa.me/01905909111" className="p-3 bg-white rounded-lg transition border border-gray-200 hover:shadow-sm ">
+          <Link to="https://wa.me/01905909111" className="flex items-center gap-2 py-2 px-3   bg-white rounded-3xl transition border border-gray-200 hover:shadow-sm ">
           <FaWhatsapp className="text-gray-700 hover:text-gray-900 transition" />
-
+          WhatsApp
           </Link>
         </div>
         <div className="flex justify-center mt-6">
-          <button
+          {/* <button
           className="px-6 py-2 bg-gradient-to-r cursor-pointer flex items-center  from-indigo-500 to-purple-400 text-white font-semibold rounded-md hover:bg-purple-700 transition"
         >
           <Icon icon="mdi:download" className="mr-2" />
           Download Resume
-        </button>
+        </button> */}
         </div>
       </div>
-      <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+      <div className=" mt-10 md:mt-0 flex justify-center bg-gradient-to-r from-indigo-200 to-purple-200 rounded-full ">
         <img
           src={logo}
           alt="Profile"
