@@ -1,8 +1,15 @@
 // components/Hero.jsx
-import { FaGithub, FaLinkedin, FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaFacebook,
+  FaTwitter,
+  FaWhatsapp,
+} from "react-icons/fa";
 import logo from "/profile.png"; // Adjust the path as necessary
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { Link } from "react-router";
+import { motion } from "motion/react";
 
 const Hero = () => {
   return (
@@ -10,7 +17,15 @@ const Hero = () => {
       id="home"
       className="flex flex-col-reverse items-center md:px-10 justify-between py-24 my-10 container mx-auto space-y-6 md:space-y-0"
     >
-      <div className="md:w-1/2 space-y-4  md:text-left px-4 md:px-0">
+      
+      <motion.div
+      
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="md:w-1/2 space-y-4  md:text-left px-4 md:px-0"
+      >
         <h1 className="text-4xl md:text-5xl text-center text-gray-800 font-bold leading-tight">
           Hi, I'm{" "}
           <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
@@ -18,26 +33,37 @@ const Hero = () => {
           </span>
         </h1>
         <p className="text-lg text-gray-700 text-center">
-          A Frontend Developer who loves to build stunning web experiences
-          with modern tech.
+          A MERN Stack Developer who loves to build stunning web experiences with
+          modern tech.
         </p>
-        <div className="flex justify-center gap-4 text-xl text-center">
-          <Link to="https://github.com/themahabur"  className="flex items-center gap-2 py-2 px-3   bg-white rounded-3xl transition border border-gray-200 hover:shadow-sm ">
-         <FaGithub className="text-gray-700 hover:text-gray-900 transition" />
-         Github
-
-          </Link >
-          <Link to="https://www.linkedin.com/in/themahabur/" className="flex items-center gap-2 py-2 px-3   bg-white rounded-3xl transition border border-gray-200 hover:shadow-sm ">
-          <FaLinkedin className="text-gray-700 hover:text-gray-900 transition" />
-          LinkedIn
+        <div className="flex flex-wrap justify-center gap-4 text-xl text-center">
+          <Link
+            to="https://github.com/themahabur"
+            className="flex items-center gap-2 py-2 px-3   bg-white rounded-3xl transition border border-gray-200 hover:shadow-sm "
+          >
+            <FaGithub className="text-gray-700 hover:text-gray-900 transition" />
+            Github
           </Link>
-          <Link to="https://www.x.com/themahabur" className="flex items-center gap-2 py-2 px-3   bg-white rounded-3xl transition border border-gray-200 hover:shadow-sm ">
-          <FaTwitter className="text-gray-700 hover:text-gray-900 transition" />
-          Twitter
+          <Link
+            to="https://www.linkedin.com/in/themahabur/"
+            className="flex items-center gap-2 py-2 px-3   bg-white rounded-3xl transition border border-gray-200 hover:shadow-sm "
+          >
+            <FaLinkedin className="text-gray-700 hover:text-gray-900 transition" />
+            LinkedIn
           </Link>
-          <Link to="https://wa.me/01905909111" className="flex items-center gap-2 py-2 px-3   bg-white rounded-3xl transition border border-gray-200 hover:shadow-sm ">
-          <FaWhatsapp className="text-gray-700 hover:text-gray-900 transition" />
-          WhatsApp
+          <Link
+            to="https://www.x.com/themahabur"
+            className="flex items-center gap-2 py-2 px-3   bg-white rounded-3xl transition border border-gray-200 hover:shadow-sm "
+          >
+            <FaTwitter className="text-gray-700 hover:text-gray-900 transition" />
+            Twitter
+          </Link>
+          <Link
+            to="https://wa.me/01905909111"
+            className="flex items-center gap-2 py-2 px-3   bg-white rounded-3xl transition border border-gray-200 hover:shadow-sm "
+          >
+            <FaWhatsapp className="text-gray-700 hover:text-gray-900 transition" />
+            WhatsApp
           </Link>
         </div>
         <div className="flex justify-center mt-6">
@@ -48,14 +74,16 @@ const Hero = () => {
           Download Resume
         </button> */}
         </div>
-      </div>
-      <div className=" mt-10 md:mt-0 flex justify-center bg-gradient-to-r from-indigo-200 to-purple-200 rounded-full ">
-        <img
-          src={logo}
-          alt="Profile"
-          className="rounded-full  w-54 h-54 transition-transform transform hover:scale-105"
-        />
-      </div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className=" mt-10 md:mt-0 flex justify-center bg-gradient-to-r from-indigo-200 to-purple-200 rounded-full "
+      >
+        <img src={logo} alt="Profile" className="rounded-full  w-54 h-54 " />
+      </motion.div>
     </section>
   );
 };
