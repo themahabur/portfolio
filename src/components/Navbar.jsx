@@ -1,4 +1,3 @@
-// components/Navbar.jsx
 import { useState } from "react";
 import { IoClose, IoMenu } from "react-icons/io5";
 import { Link } from "react-scroll";
@@ -10,61 +9,71 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const navItems = ["home", "about", "skills", "projects", "contact"];
+
   return (
-    <nav className="fixed top-0 z-50 w-full md:p-4 flex justify-center">
-      <div className="md:w-2/5 w-full flex items-center justify-between md:justify-center gap-4 bg-gray-50 border border-gray-200 md:rounded-4xl px-4 py-3">
-        <div className="flex items-center gap-4 relative">
-          <div className="md:hidden">
-            {isOpen ? (
-              <IoClose
-                className="text-2xl cursor-pointer"
-                onClick={handleMenuClick}
-              />
-            ) : (
-              <IoMenu
-                className="text-2xl cursor-pointer"
-                onClick={handleMenuClick}
-              />
-            )}
-          </div>
+    <nav className="fixed top-0 z-50 w-full bg-transparent">
+      <div className="w-full px-4 sm:px-6 lg:px-8 py-3">
+        <div className="max-w-lg mx-auto  flex justify-between items-center border border-gray-200 bg-gray-50 rounded-full px-4 py-3">
+          {/* Left Section: Logo & Mobile Menu */}
+          <div className="flex items-center gap-4 relative">
+            {/* Mobile Menu Icon */}
+            <div className="md:hidden">
+              {isOpen ? (
+                <IoClose
+                  className="text-2xl cursor-pointer"
+                  onClick={handleMenuClick}
+                />
+              ) : (
+                <IoMenu
+                  className="text-2xl cursor-pointer"
+                  onClick={handleMenuClick}
+                />
+              )}
+            </div>
 
-          <h1 className="text-2xl font-bold hidden md:block logo">M</h1>
-          <h3 className="text-2xl font-bold md:hidden">Mahabur</h3>
+            {/* Logo */}
+            <h1 className="text-2xl font-bold hidden md:block">M</h1>
+            <h3 className="text-2xl font-bold md:hidden">Mahabur</h3>
 
-          {isOpen && (
-            <ul className="absolute top-12 left-0 bg-white shadow-lg rounded-lg md:hidden flex flex-col  gap-4 p-4">
-              {["home", "about", "skills", "projects", "contact"].map(
-                (item) => (
+            {/* Mobile Dropdown Menu */}
+            {isOpen && (
+              <ul className="absolute top-12 left-0 w-44 bg-white border border-gray-100 shadow-lg rounded-lg md:hidden flex flex-col gap-3 p-4 transition-all z-50">
+                {navItems.map((item) => (
                   <li key={item}>
                     <Link
                       to={item}
                       smooth
                       duration={500}
-                      className="cursor-pointer hover:text-purple-500 text-xl"
+                      offset={-70}
+                      className="block text-gray-800 hover:text-purple-600 text-base font-medium cursor-pointer"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.charAt(0).toUpperCase() + item.slice(1)}
                     </Link>
                   </li>
-                )
-              )}
-            </ul>
-          )}
+                ))}
+              </ul>
+            )}
+          </div>
+
+          {/* Right Section: Desktop Menu */}
+          <ul className="hidden md:flex gap-6 font-medium items-center">
+            {navItems.map((item) => (
+              <li key={item}>
+                <Link
+                  to={item}
+                  smooth
+                  duration={500}
+                  offset={-70}
+                  className="text-xl cursor-pointer hover:text-purple-600 transition-colors"
+                >
+                  {item.charAt(0).toUpperCase() + item.slice(1)}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
-        <ul className="hidden md:flex gap-6 font-medium">
-          {["home", "about", "skills", "projects", "contact"].map((item) => (
-            <li key={item}>
-              <Link
-                to={item}
-                smooth
-                duration={500}
-                className="cursor-pointer hover:text-purple-500 text-xl"
-              >
-                {item.charAt(0).toUpperCase() + item.slice(1)}
-              </Link>
-            </li>
-          ))}
-        </ul>
       </div>
     </nav>
   );
