@@ -19,7 +19,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-4xl font-bold bg-gradient-to-l from-indigo-600 via-purple-600 to-violet-600 dark:from-indigo-400 dark:via-purple-400 dark:to-violet-400 bg-clip-text text-transparent text-center"
+          className="text-4xl font-bold text-indigo-700  text-center"
         >
           About Me
         </motion.h2>
