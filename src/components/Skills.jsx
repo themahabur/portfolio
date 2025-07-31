@@ -1,111 +1,84 @@
-import { Icon } from "@iconify/react/dist/iconify.js";
+import { motion } from "framer-motion";
+import SkillCard from "./SkillCard";
 
-// components/Skills.jsx
+const skills = [
+  {
+    name: "HTML",
+    src: "skill-icons:html",
+  },
+  {
+    name: "CSS",
+    src: "skill-icons:css",
+  },
+  {
+    name: "JavaScript",
+    src: "skill-icons:javascript",
+  },
+  {
+    name: "React",
+    src: "skill-icons:react-dark",
+  },
+  {
+    name: "Tailwind CSS",
+    src: "logos:tailwindcss-icon",
+  },
+  {
+    name: "Git",
+    src: "skill-icons:git",
+  },
+  {
+    name: "GitHub",
+    src: "mdi:github",
+  },
+  {
+    name: "Firebase",
+    src: "logos:firebase-icon",
+  },
+  {
+    name: "Node.js",
+    src: "devicon:nodejs",
+  },
+  {
+    name: "Express.js",
+    src: "skill-icons:expressjs-dark",
+  },
+  {
+    name: "MongoDB",
+    src: "skill-icons:mongodb",
+  },
+  {
+    name: "VS Code",
+    src: "skill-icons:vscode-dark",
+  },
+  {
+    name: "Figma",
+    src: "logos:figma",
+  }
+  ,
+  {
+    name: "Vercel",
+    src: "logos:vercel-icon",
+  }
+];
+
 const Skills = () => {
   return (
-    <section id="skills" className="py-16 px-4 my-6">
-      <div className="max-w-5xl mx-auto text-center space-y-8">
-        <h2 className="text-3xl font-bold bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
+    <section id="skills" className="py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto text-center space-y-12">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-4xl font-bold bg-gradient-to-l from-indigo-600 via-purple-600 to-violet-600 dark:from-indigo-400 dark:via-purple-400 dark:to-violet-400 bg-clip-text text-transparent"
+        >
           Skills
-        </h2>
-        <div className="grid grid-cols-2  md:grid-cols-5 gap-6 justify-center p-12">
-          <div className="hover:shadow-sm transition duration-300 ease-in-out rounded-lg bg-white p-3  border-2 border-gray-100 flex flex-col items-center justify-between">
-            <img
-              src="https://img.icons8.com/color/100/000000/html-5.png"
-              alt=""
-            />
-            <span className="text-gray-700 ">HTML</span>
-          </div>
-          <div className="hover:shadow-sm transition duration-300 ease-in-out rounded-lg bg-white p-3  border-2 border-gray-100 flex flex-col items-center justify-between">
-            <img
-              src="https://img.icons8.com/color/100/000000/css3.png"
-              alt=""
-            />
-            <span className="text-gray-700 ">CSS</span>
-          </div>
-          <div className="hover:shadow-sm transition duration-300 ease-in-out rounded-lg bg-white p-3  border-2 border-gray-100 flex flex-col items-center justify-between">
-            <img
-              src="https://img.icons8.com/color/100/000000/javascript.png"
-              alt=""
-            />
-            <span className="text-gray-700 ">JavaScript</span>
-          </div>
-          <div className="hover:shadow-sm transition duration-300 ease-in-out rounded-lg bg-white p-3  border-2 border-gray-100 flex flex-col items-center justify-between">
-            <img
-              src="https://img.icons8.com/color/100/000000/react-native.png"
-              alt=""
-            />
-            <span className="text-gray-700 ">React</span>
-          </div>
-          <div className="hover:shadow-sm transition duration-300 ease-in-out rounded-lg bg-white p-3  border-2 border-gray-100 flex flex-col items-center justify-between">
-            <img
-              src="https://img.icons8.com/color/100/000000/tailwindcss.png"
-              alt=""
-            />
-            <span className="text-gray-700 ">Tailwind CSS</span>
-          </div>
-          <div className="hover:shadow-sm transition duration-300 ease-in-out rounded-lg bg-white p-3  border-2 border-gray-100 flex flex-col items-center justify-between">
-            <img src="https://img.icons8.com/color/100/000000/git.png" alt="" />
-            <span className="text-gray-700 ">Git</span>
-          </div>
-          <div className="hover:shadow-sm transition duration-300 ease-in-out rounded-lg bg-white p-3  border-2 border-gray-100 flex flex-col items-center justify-between">
-            <img
-              src="https://img.icons8.com/color/100/000000/github.png"
-              alt=""
-            />
-            <span className="text-gray-700 ">GitHub</span>
-          </div>
-          <div className="hover:shadow-sm transition duration-300 ease-in-out rounded-lg bg-white p-3  border-2 border-gray-100 flex flex-col items-center justify-between">
-            <img
-              src="https://img.icons8.com/color/100/000000/firebase.png"
-              alt=""
-            />
-            <span className="text-gray-700 ">Firebase</span>
-          </div>
-          <div className="hover:shadow-sm transition duration-300 ease-in-out rounded-lg bg-white p-3  border-2 border-gray-100 flex flex-col items-center justify-between">
-            <img
-              src="https://img.icons8.com/color/100/000000/nodejs.png"
-              alt=""
-            />
-            <span className="text-gray-700 ">Node.js</span>
-          </div>
-          <div className="hover:shadow-sm transition duration-300 ease-in-out rounded-lg bg-white p-3  border-2 border-gray-100 flex flex-col items-center justify-between">
-            <img
-              src="https://img.icons8.com/color/100/000000/express-js.png"
-              alt=""
-            />
-            <span className="text-gray-700 ">Express.js</span>
-          </div>
-          <div className="hover:shadow-sm transition duration-300 ease-in-out rounded-lg bg-white p-3  border-2 border-gray-100 flex flex-col items-center justify-between">
-            <img
-              src="https://img.icons8.com/color/100/000000/mongodb.png"
-              alt=""
-            />
-            <span className="text-gray-700 ">MongoDB</span>
-          </div>
+        </motion.h2>
 
-          <div className="hover:shadow-sm transition duration-300 ease-in-out rounded-lg bg-white p-3  border-2 border-gray-100 flex flex-col items-center justify-between">
-            <img
-              src="https://img.icons8.com/?size=100&id=0OQR1FYCuA9f&format=png&color=000000"
-              alt=""
-            />
-            <span className="text-gray-700 ">VS Code</span>
-          </div>
-
-          <div className="hover:shadow-sm transition duration-300 ease-in-out rounded-lg bg-white p-3  border-2 border-gray-100 flex flex-col items-center justify-between">
-            <img
-              src="https://img.icons8.com/color/100/000000/figma.png"
-              alt=""
-            />
-            <span className="text-gray-700 ">Figma</span>
-          </div>
-          <div className="hover:shadow-sm transition duration-300 ease-in-out rounded-lg bg-white p-3  border-2 border-gray-100 flex flex-col items-center justify-between">
-            <img
-              src="https://img.daisyui.com/images/daisyui/horizontal-dark.svg"
-              alt=""
-            />
-            <span className="text-gray-700 ">DaisyUI</span>
-          </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          {skills.map((skill) => (
+            <SkillCard key={skill.name} {...skill} />
+          ))}
         </div>
       </div>
     </section>
