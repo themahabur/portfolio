@@ -1,23 +1,21 @@
 import { Icon } from "@iconify/react";
 import { motion } from "motion/react";
 
-const SkillCard = ({ name, src,}) => {
+const SkillCard = ({ name, src }) => {
   return (
     <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-    
-    
-    className="group relative transition duration-300">
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.4 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="group relative transition duration-300"
+    >
       <div className="relative">
         {/* Glowing background on hover */}
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-xl scale-105" />
 
         {/* Main card */}
         <div className="relative bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl rounded-2xl border border-gray-200/60 dark:border-gray-700/60 group-hover:border-gray-300/80 dark:group-hover:border-gray-600/80 transition-all duration-300 shadow-lg group-hover:shadow-2xl group-hover:shadow-black/5 dark:group-hover:shadow-black/40 overflow-hidden">
-          
           {/* Top border gradient */}
           <div className="relative h-0.5 bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent">
             <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -47,24 +45,26 @@ const SkillCard = ({ name, src,}) => {
               </div>
             </div>
 
-            
             <h3 className="text-sm font-bold text-gray-900 dark:text-gray-100 text-center mb-2 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors tracking-tight">
               {name}
             </h3>
 
-            
             <div className="flex justify-center mb-2">
               <span className="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-semibold border bg-gradient-to-r from-emerald-500/10 to-teal-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-200 dark:border-emerald-800 transition-all duration-300">
                 <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 mr-1.5" />
-                
               </span>
             </div>
-
-            
           </div>
 
           {/* Pattern background */}
-          <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05] pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, currentcolor 1px, transparent 0px)", backgroundSize: "20px 20px" }} />
+          <div
+            className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05] pointer-events-none"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 1px 1px, currentcolor 1px, transparent 0px)",
+              backgroundSize: "20px 20px",
+            }}
+          />
         </div>
       </div>
     </motion.div>
